@@ -1,5 +1,6 @@
 #include "bubble.hpp"
 #include "insert.hpp"
+#include "merge.hpp"
 #include "quick.hpp"
 
 #include <iostream>
@@ -14,6 +15,7 @@ int main(int argc, char **args) {
     Bubble bubble;
     Insert insert;
     Quick quick;
+    Merge merge;
 
     bubble.sort(v);
     Sort::verify(v, o_v);
@@ -24,6 +26,10 @@ int main(int argc, char **args) {
 
     v = m_v;
     quick.sort(v);
+    Sort::verify(v, o_v);
+
+    v = m_v;
+    merge.sort(v);
     Sort::verify(v, o_v);
 
     cout << "sort test finish" << endl;
