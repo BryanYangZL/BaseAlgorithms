@@ -19,7 +19,7 @@ class Sort {
         cout << endl;
     };
 
-    static void verify(vector<int> &v, vector<int> &o_v) {
+    static bool verify(vector<int> &v, vector<int> &o_v) {
         bool successful = false;
 
         if (v.size() == o_v.size()) {
@@ -33,10 +33,11 @@ class Sort {
         }
 
         if (!successful) {
-            cout << "Fail" << endl;
             dump(v);
             dump(o_v);
         }
+
+        return successful;
     };
 };
 
