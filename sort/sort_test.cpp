@@ -3,6 +3,7 @@
 #include "merge.hpp"
 #include "quick.hpp"
 #include "select.hpp"
+#include "shell.hpp"
 
 #include <iostream>
 #include <vector>
@@ -15,9 +16,9 @@ class SortTest : public testing::Test {
     virtual void TearDown() { ASSERT_TRUE(Sort::verify(v, o_v)); }
 
    public:
-    vector<int> v = {100, 99, 18, 77, 26, 1, -1, 32, 99, 76};
+    vector<int> v = {100, 99, 18, 77, 26, 1, -1, 32, 99, 76, 78};
     vector<int> m_v = v;
-    vector<int> o_v = {-1, 1, 18, 26, 32, 76, 77, 99, 99, 100};
+    vector<int> o_v = {-1, 1, 18, 26, 32, 76, 77, 78, 99, 99, 100};
 };
 
 TEST_F(SortTest, Bubble) {
@@ -43,4 +44,9 @@ TEST_F(SortTest, Merge) {
 TEST_F(SortTest, Select) {
     Select select;
     select.sort(v);
+}
+
+TEST_F(SortTest, Shell) {
+    Shell shell;
+    shell.sort(v);
 }
