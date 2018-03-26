@@ -2,6 +2,7 @@
 #include "insert.hpp"
 #include "merge.hpp"
 #include "quick.hpp"
+#include "select.hpp"
 
 #include <iostream>
 #include <vector>
@@ -37,4 +38,9 @@ TEST_F(SortTest, Quick) {
 TEST_F(SortTest, Merge) {
     Merge merge;
     merge.sort(v);
+}
+
+TEST_F(SortTest, Select) {
+    Select select;
+    select.sort(v);
 }
