@@ -1,2 +1,2 @@
-*.CMake linguist-language=cpp
-*.cmake.in linguist-language=cpp
+*.CMake linguist-generated=false
+*.cmake.in linguist-generated=false
