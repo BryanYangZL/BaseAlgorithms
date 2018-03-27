@@ -1,0 +1,2 @@
+*.CMake linguist-language=cpp
+*.cmake.in linguist-language=cpp
