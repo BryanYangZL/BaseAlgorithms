@@ -1,2 +1,2 @@
-*.CMake linguist-generated=true
-*.cmake.in linguist-generated=true
+*.CMake linguist-language=
+*.cmake.in linguist-language=
